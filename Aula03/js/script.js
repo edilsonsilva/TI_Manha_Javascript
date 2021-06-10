@@ -55,8 +55,6 @@ else if(nota <= 4)
     alert("Reprovado")
 else
     alert("Recuperação")
-
-
 }
 
 function verificaTer(){
