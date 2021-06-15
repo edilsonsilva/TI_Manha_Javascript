@@ -1,23 +1,23 @@
-function valida(){
+function valida() {
     const nome = document.getElementById("txtNome");
     const email = document.getElementById("txtEmail");
     const idade = document.getElementById("txtIdade");
     const telefone = document.getElementById("txtTelefone");
 
     // vamos retirar os espaços a mais com o comando Trim e verificar se o campo está vazio
-    if(nome.value.trim()==""){
+    if (nome.value.trim() == "") {
         alert("Você precisa preencher o nome");
         // vamos colocar o ponto de inserção devolta a caixa nome
-        nome.value="";
+        nome.value = "";
         nome.focus();//a caixa nome volta a ter o foco
     }
     //vamos validar o email convertendo os caracteres para miniusculo
     email.value = email.value.toLowerCase();
 
     //validar o campo telefone
-    if(telefone.value.trim()==""){
+    if (telefone.value.trim() == "") {
         alert("Você precisa preencher o telefone");
-        telefone.value="";
+        telefone.value = "";
         telefone.focus();
     }
 
@@ -63,60 +63,60 @@ para as estruturas: For, While e Do While. O trabalho é feito da seguinte forma
 
     */
 
-function contar(){
-    
-    for(v = 1; v <= 10 ; v++){
+function contar() {
+
+    for (v = 1; v <= 10; v++) {
         console.log(v);
     }
 }
 
-function criarElementos(){
-    for(b = 1; b <= 10; b++){
-        document.getElementById("saida").innerHTML+="<button>Botão Criado - "+b+"</button>"
+function criarElementos() {
+    for (b = 1; b <= 10; b++) {
+        document.getElementById("saida").innerHTML += "<button>Botão Criado - " + b + "</button>"
     }
 
-    for(b = 1 ; b <= 10; b++){
-        document.getElementsByTagName("button")[b].style.backgroundColor="red";
-        document.getElementsByTagName("button")[b].style.color="white";
-        document.getElementsByTagName("button")[b].style.margin="5px";
+    for (b = 1; b <= 10; b++) {
+        document.getElementsByTagName("button")[b].style.backgroundColor = "red";
+        document.getElementsByTagName("button")[b].style.color = "white";
+        document.getElementsByTagName("button")[b].style.margin = "5px";
     }
-    
+
 }
 
-function tabuadaSimples(){
+function tabuadaSimples() {
     inicial = 0
 
-    while(inicial <= 10){
-        document.getElementById("saida").innerHTML+="<br> 2 x "+inicial+" = "+(2*inicial);
+    while (inicial <= 10) {
+        document.getElementById("saida").innerHTML += "<br> 2 x " + inicial + " = " + (2 * inicial);
         inicial++;
     }
 
 }
 
-function tabuadaCompleta(){
+function tabuadaCompleta() {
 
     inicial = 0;
     numeros = 1;
 
-    while(numeros <= 10){
+    while (numeros <= 10) {
 
-        while(inicial <= 10){
-            document.getElementById("saida").innerHTML+="<br>"+numeros+" x "+inicial+" = "+(numeros*inicial);
+        while (inicial <= 10) {
+            document.getElementById("saida").innerHTML += "<br>" + numeros + " x " + inicial + " = " + (numeros * inicial);
             inicial++;
         }
-        inicial=0;
-        document.getElementById("saida").innerHTML+="<hr>";
+        inicial = 0;
+        document.getElementById("saida").innerHTML += "<hr>";
         numeros++;
     }
 }
-function lacoDoWhile(){
+function lacoDoWhile() {
 
     n = 20
 
-    do{
+    do {
         console.log(n);
         n++;
-    }while(n<10);
+    } while (n < 10);
 
 
 
@@ -137,23 +137,23 @@ function lacoDoWhile(){
 // nomes.push("Marcos")
 // console.log(nomes.length)
 
-function arrayUmNumeros(){
+function arrayUmNumeros() {
     const valores = [];
     console.log(valores);
     console.log(valores.length);
 
-    for(ano = 1975; ano <= 2021 ; ano++){
+    for (ano = 1975; ano <= 2021; ano++) {
         valores.push(ano);
     }
     console.log(valores);
     console.log(valores.length);
 }
 
-function arrayDoisNumeros(){
-    const n = [10,05,60,23,04,12,18,81,37];
+function arrayDoisNumeros() {
+    const n = [10, 05, 60, 23, 04, 12, 18, 81, 37];
 
     // for( i = 0; i <= 8; i++){
-    //     if(n[i] % 2 == 0){
+    //     if(n[i] % 2 != 0){
     //         console.log(n[i])
     //     }
     // }
@@ -162,12 +162,14 @@ function arrayDoisNumeros(){
     //     console.log(i)
     // }
 
-    n.forEach(function(v,i){
+    n.forEach(function (v, i) {
         console.log(v);
     });
 
-    n.map(function(v,i){
+    n.map(function (v, i) {
         console.log(v)
     })
+
+    
 
 }
