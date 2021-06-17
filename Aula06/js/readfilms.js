@@ -55,9 +55,10 @@ filmes.results.map((rs,ix)=>{
 
     main.appendChild(div);
     div.onmouseover=()=>{
-        body.style.backgroundColor="rgba(0,0,0,0.4)"
+        body.style.backgroundImage=`url(https://image.tmdb.org/t/p/w500${rs.poster_path})`;
+        body.style.backgroundSize="100%";
         body.style.transitionTimingFunction="ease";
-        body.style.transitionDuration="1s"
+        body.style.transitionDuration="3s"
     }
     div.onmouseout=()=>{
         body.style.backgroundColor="rgb(255,255,255)"
