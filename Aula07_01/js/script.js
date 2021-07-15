@@ -12,9 +12,12 @@ function filmes() {
             resultado.results.map((dados, ix) => {
                 main.innerHTML += `<div>
                 <img src=https://image.tmdb.org/t/p/w500${dados.poster_path}>
+                <span id="media">${dados.vote_average}%</span>
                 <h2>${dados.title}</h2>
                 <h5>Lançamento: ${dados.release_date}</h5>
-                <p>${dados.overview}</p>
+                <span id="link">
+                    <a href=detalhes.html?id=${dados.id}> Mais detalhes </a>
+                </span>
                 </div>`;
             })
         })
